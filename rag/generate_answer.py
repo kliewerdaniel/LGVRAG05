@@ -78,17 +78,35 @@ class AnswerGenerator:
     def _validate_ollama_connection(self) -> None:
         """Validate Ollama server connectivity and model availability."""
         try:
-            # Check if Ollama server is running
-            asyncio.run(self._check_ollama_health())
+            # Check if we're in an async context
+            try:
+                loop = asyncio.get_running_loop()
+                # We're in an async context, use create_task instead of asyncio.run
+                import concurrent.futures
 
-            # Check if the specified model is available
-            asyncio.run(self._check_model_availability())
+                with concurrent.futures.ThreadPoolExecutor() as executor:
+                    health_future = executor.submit(self._run_async_validation)
+                    health_future.result(timeout=10)
+
+            except RuntimeError:
+                # No event loop running, safe to use asyncio.run
+                asyncio.run(self._run_async_validation())
 
             logger.info(f"Ollama connection validated for model: {self.model_name}")
 
         except Exception as e:
             logger.error(f"Ollama validation failed: {e}")
             raise RuntimeError(f"Ollama server not available or model '{self.model_name}' not found. Please ensure Ollama is running and the model is installed.")
+
+    def _run_async_validation(self) -> None:
+        """Run async validation in a new event loop."""
+        loop = asyncio.new_event_loop()
+        asyncio.set_event_loop(loop)
+        try:
+            loop.run_until_complete(self._check_ollama_health())
+            loop.run_until_complete(self._check_model_availability())
+        finally:
+            loop.close()
 
     async def _check_ollama_health(self) -> None:
         """Check if Ollama server is running."""
