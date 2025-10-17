@@ -5,3 +5,8 @@ venv/
 .venv/
 documents/
 back/
+logs/
+*.log
+.DS_Store
+chromadb/
+.sqlite3

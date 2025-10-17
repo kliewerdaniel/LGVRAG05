@@ -709,3 +709,862 @@ ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Resp
       "predicate": "created_by",
       "object": "kliewerdaniel",
       "confide...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "users",
+      "predicate": "instance_of",
+      "object": "persons",
+      "confidence": 0.95
+    },
+    {
+      "subject": "interface",
+      "predicate": "works_at",
+      "object": "users",
+      "confidence": 0.9
+    },
+    {
+      "subject": "visua...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "main.py",
+      "predicate": "instance_of",
+      "object": "file",
+      "confidence": 0.98
+    },
+    {
+      "subject": "click",
+      "predicate": "instance_of",
+      "object": "module",
+      "confidence": 0.99
+    },
+    {
+      "subject": "os",
+...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "Kubernetes",
+      "predicate": "part_of",
+      "object": "Ray cluster configuration",
+      "confidence": 0.95
+    },
+    {
+      "subject": "Ray",
+      "predicate": "handles",
+      "object": "distributed computing and resource allocation",
+      "c...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "Knowledge ChromaDB",
+      "predicate": "offers",
+      "object": "lightweight, embeddable vector store",
+      "confidence": 0.95
+    },
+    {
+      "subject": "ChromaDB for agent knowledge storage",
+      "predicate": "uses",
+      "object": "embeddin...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "FastAPI",
+      "predicate": "part_of",
+      "object": "fastapi.middleware.cors",
+      "confidence": 0.95
+    },
+    {
+      "subject": "FastAPI",
+      "predicate": "created_by",
+      "object": "autogen",
+      "confidence": 0.9
+    },
+    {
+      "...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "mlflow.log_param",
+      "predicate": "instance_of",
+      "object": "function",
+      "confidence": 0.98
+    },
+    {
+      "subject": "_flatten_dict",
+      "predicate": "instance_of",
+      "object": "method",
+      "confidence": 0.97
+    },
+    {
+  ...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "task",
+      "predicate": "instance_of",
+      "object": "AgentTask",
+      "confidence": 0.95
+    },
+    {
+      "subject": "status",
+      "predicate": "part_of",
+      "object": "task",
+      "confidence": 0.9
+    },
+    {
+      "subject": "completed...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "get_snowflake_connection",
+      "predicate": "instance_of",
+      "object": "function",
+      "confidence": 0.98
+    },
+    {
+      "subject": "conn",
+      "predicate": "instance_of",
+      "object": "variable",
+      "confidence": 0.95
+    },
+    {
+ ...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "News Sentiment Analyst",
+      "predicate": "is",
+      "object": "Specialized in news and social media sentiment",
+      "confidence": 0.98
+    },
+    {
+      "subject": "Specialized in news and social media sentiment",
+      "predicate": "performs res...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "self.user_proxy",
+      "predicate": "instance_of",
+      "object": "UserProxyAgent",
+      "confidence": 0.95
+    },
+    {
+      "subject": "analyze_sentiment",
+      "predicate": "works_at",
+      "object": "CustomerServiceCoordinator",
+      "confide...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "Effective Date",
+      "predicate": "located_in",
+      "object": "Initial Term",
+      "confidence": 0.95
+    },
+    {
+      "subject": "Initial Term",
+      "predicate": "lasts_for",
+      "object": "3 years",
+      "confidence": 0.98
+    },
+    {
+   ...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "User",
+      "predicate": "subclass_of",
+      "object": "AgentType",
+      "confidence": 0.9
+    },
+    {
+      "subject": "UserSerializer",
+      "predicate": "instance_of",
+      "object": "User",
+      "confidence": 0.95
+    },
+    {
+      "subject"...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "Dockerfile",
+      "predicate": "contains",
+      "object": "volumes",
+      "confidence": 0.95
+    },
+    {
+      "subject": "Dockerfile",
+      "predicate": "contains",
+      "object": "environment variables",
+      "confidence": 0.9
+    },
+    {
+    ...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "successful_queries",
+      "predicate": "instance_of",
+      "object": "integer",
+      "confidence": 0.95
+    },
+    {
+      "subject": "failed_queries",
+      "predicate": "instance_of",
+      "object": "integer",
+      "confidence": 0.95
+    },
+    {...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "name",
+      "predicate": "instance_of",
+      "object": "str",
+      "confidence": 0.95
+    },
+    {
+      "subject": "_do_delete",
+      "predicate": "works_at",
+      "object": "client",
+      "confidence": 0.9
+    },
+    {
+      "subject": "_do_dele...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {"relationships": [
+  {
+    "subject": "for m in type_metrics",
+    "predicate": "instance_of",
+    "object": "m",
+    "confidence": 0.95
+  },
+  {
+    "subject": "costs",
+    "predicate": "related_to",
+    "object": "type_report['cost']",
+    "confidence": 0.9
+  },
+  {
+    "subject": "completed",
+  ...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "Multimodal Story Generation System",
+      "predicate": "instance_of",
+      "object": "AI Systems",
+      "confidence": 0.95
+    },
+    {
+      "subject": "LLaVA",
+      "predicate": "works_at",
+      "object": "Multimodal Story Generation System",
+   ...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "broader context",
+      "predicate": "inform",
+      "object": "accurate annotations",
+      "confidence": 0.95
+    },
+    {
+      "subject": "Technical Precision",
+      "predicate": "Ensuring",
+      "object": "data integrity through meticulous annota...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "automation tools",
+      "predicate": "alleviate",
+      "object": "stress",
+      "confidence": 0.9
+    },
+    {
+      "subject": "automation tools",
+      "predicate": "streamline",
+      "object": "workflows",
+      "confidence": 0.9
+    },
+    {
+   ...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "layout",
+      "predicate": "instance_of",
+      "object": "post",
+      "confidence": 0.95
+    },
+    {
+      "subject": "title",
+      "predicate": "works_at",
+      "object": "layout",
+      "confidence": 0.9
+    },
+    {
+      "subject": "date",
+   ...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "Feedback Mechanisms",
+      "predicate": "uses",
+      "object": "feedback forms",
+      "confidence": 0.95
+    },
+    {
+      "subject": "platform",
+      "predicate": "has",
+      "object": "feedback forms",
+      "confidence": 0.9
+    },
+    {
+      ...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "Operating System",
+      "predicate": "instance_of",
+      "object": "Windows",
+      "confidence": 0.95
+    },
+    {
+      "subject": "Operating System",
+      "predicate": "instance_of",
+      "object": "macOS",
+      "confidence": 0.95
+    },
+    {
+ ...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "Partners",
+      "predicate": "collaborations_with",
+      "object": "tech companies or research institutions",
+      "confidence": 0.95
+    },
+    {
+      "subject": "Timeline and Milestones",
+      "predicate": "includes",
+      "object": "Week 1-2: P...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "layout",
+      "predicate": "instance_of",
+      "object": "post",
+      "confidence": 0.95
+    },
+    {
+      "subject": "title",
+      "predicate": "works_at",
+      "object": "post",
+      "confidence": 0.98
+    },
+    {
+      "subject": "date",
+    ...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "AnnotationViewSet",
+      "predicate": "instance_of",
+      "object": "viewset",
+      "confidence": 0.98
+    },
+    {
+      "subject": "AnnotationSerializer",
+      "predicate": "part_of",
+      "object": "AnnotationViewSet",
+      "confidence": 0.97
+ ...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "RedDiss",
+      "predicate": "instance_of",
+      "object": "AI-powered diss track generator",
+      "confidence": 0.95
+    },
+    {
+      "subject": "RedDiss",
+      "predicate": "created_by",
+      "object": "Daniel Kliewer",
+      "confidence": 0.9
+ ...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "frontend",
+      "predicate": "related_to",
+      "object": "backend",
+      "confidence": 0.95
+    },
+    {
+      "subject": "uploaded file",
+      "predicate": "instance_of",
+      "object": "file",
+      "confidence": 0.98
+    },
+    {
+      "subject...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "feedback",
+      "predicate": "instance_of",
+      "object": "user input",
+      "confidence": 0.95
+    },
+    {
+      "subject": "negative feedback",
+      "predicate": "related_to",
+      "object": "feature improvement need",
+      "confidence": 0.9
+ ...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {"relationships": [
+  {
+    "subject": "backend",
+    "predicate": "works_at",
+    "object": "lesson generation",
+    "confidence": 0.95
+  },
+  {
+    "subject": "backend",
+    "predicate": "works_at",
+    "object": "progress tracking",
+    "confidence": 0.95
+  },
+  {
+    "subject": "backend",
+    "p...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "users' browsers",
+      "predicate": "located_in",
+      "object": "website",
+      "confidence": 0.95
+    },
+    {
+      "subject": "your server",
+      "predicate": "located_in",
+      "object": "website",
+      "confidence": 0.95
+    },
+    {
+      "...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "User",
+      "predicate": "accesses",
+      "object": "learning dashboard (Frontend)",
+      "confidence": 0.95
+    },
+    {
+      "subject": "Backend",
+      "predicate": "queries",
+      "object": "knowledge graph and retrieves relevant past progress"...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "user expectations",
+      "predicate": "related_to",
+      "object": "digital landscape",
+      "confidence": 0.9
+    },
+    {
+      "subject": "user expectations",
+      "predicate": "related_to",
+      "object": "ever-evolving digital landscape",
+    ...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "lessons",
+      "predicate": "resonating_with",
+      "object": "users",
+      "confidence": 0.9
+    },
+    {
+      "subject": "Dynamic Difficulty Adjustment",
+      "predicate": "works_at",
+      "object": "lesson difficulty",
+      "confidence": 0.95
+...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "indie hacker",
+      "predicate": "is",
+      "object": "entity performing action",
+      "confidence": 0.9
+    },
+    {
+      "subject": "startup founder",
+      "predicate": "is",
+      "object": "entity performing action",
+      "confidence": 0.9
+   ...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "FastAPI",
+      "predicate": "instance_of",
+      "object": "web framework",
+      "confidence": 0.95
+    },
+    {
+      "subject": "Django",
+      "predicate": "instance_of",
+      "object": "web framework",
+      "confidence": 0.95
+    },
+    {
+      ...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "layout",
+      "predicate": "instance_of",
+      "object": "post",
+      "confidence": 0.95
+    },
+    {
+      "subject": "title",
+      "predicate": "instance_of",
+      "object": "string",
+      "confidence": 0.98
+    },
+    {
+      "subject": "date",...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "layout",
+      "predicate": "instance_of",
+      "object": "post",
+      "confidence": 0.95
+    },
+    {
+      "subject": "title",
+      "predicate": "works_at",
+      "object": "post",
+      "confidence": 0.9
+    },
+    {
+      "subject": "date",
+     ...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "EchoShelf",
+      "predicate": "instance_of",
+      "object": "Enterprise Voice Annotation System",
+      "confidence": 0.98
+    },
+    {
+      "subject": "EchoShelf",
+      "predicate": "created_by",
+      "object": "EchoShelf Development Team",
+      ...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "EchoShelf",
+      "predicate": "provides",
+      "object": "integration options",
+      "confidence": 0.95
+    },
+    {
+      "subject": "Integration Options",
+      "predicate": "are_for",
+      "object": "enterprise environments",
+      "confidence": ...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "_validate_chapter",
+      "predicate": "instance_of",
+      "object": "function",
+      "confidence": 0.98
+    },
+    {
+      "subject": "_update_rag",
+      "predicate": "instance_of",
+      "object": "function",
+      "confidence": 0.98
+    },
+    {
+ ...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "transformation_api.py",
+      "predicate": "instance_of",
+      "object": "Python script",
+      "confidence": 0.98
+    },
+    {
+      "subject": "FastAPI app",
+      "predicate": "created_by",
+      "object": "transformation_api.py",
+      "confidence"...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "get_document_versions",
+      "predicate": "instance_of",
+      "object": "DocumentStore",
+      "confidence": 0.95
+    },
+    {
+      "subject": "add_tags",
+      "predicate": "instance_of",
+      "object": "DocumentStore",
+      "confidence": 0.95
+   ...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "debugging",
+      "predicate": "benefit",
+      "object": "Production readiness and easier troubleshooting",
+      "confidence": 0.95
+    },
+    {
+      "subject": "Security and Policy Compliance",
+      "predicate": "goal",
+      "object": "Ensure the ...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "logged",
+      "predicate": "instance_of",
+      "object": "RL policy improvement mechanism",
+      "confidence": 0.9
+    },
+    {
+      "subject": "used to improve",
+      "predicate": "works_at",
+      "object": "RL policy",
+      "confidence": 0.85
+ ...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "MetaAgent",
+      "predicate": "instance_of",
+      "object": "agent",
+      "confidence": 0.98
+    },
+    {
+      "subject": "MetaAgent",
+      "predicate": "add_subsystem",
+      "object": "AgentSubsystem",
+      "confidence": 0.97
+    },
+    {
+      ...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "Optimizes routing decisions",
+      "predicate": "based_on",
+      "object": "historical performance data",
+      "confidence": 0.95
+    },
+    {
+      "subject": "__init__ method",
+      "predicate": "initializes",
+      "object": "self.performance_his...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "await",
+      "predicate": "instance_of",
+      "object": "async def _get_embedding(self, text: str) -> Optional[List[float]]:",
+      "confidence": 0.95
+    },
+    {
+      "subject": "self.redis",
+      "predicate": "part_of",
+      "object": "await se...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "Web Interface",
+      "predicate": "part_of",
+      "object": "Dashboard View",
+      "confidence": 0.95
+    },
+    {
+      "subject": "Chat Interface",
+      "predicate": "part_of",
+      "object": "Dashboard View",
+      "confidence": 0.95
+    },
+    ...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "Configurable AI agents",
+      "predicate": "instance_of",
+      "object": "AI agents",
+      "confidence": 0.98
+    },
+    {
+      "subject": "Cost Optimization",
+      "predicate": "related_to",
+      "object": "Reduces API costs",
+      "confidence":...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "fill",
+      "predicate": "instance_of",
+      "object": "graph",
+      "confidence": 0.95
+    },
+    {
+      "subject": "gridPos",
+      "predicate": "part_of",
+      "object": "fill",
+      "confidence": 0.9
+    },
+    {
+      "subject": "legend",
+   ...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "CPU",
+      "predicate": "part_of",
+      "object": "database server",
+      "confidence": 0.95
+    },
+    {
+      "subject": "RAM",
+      "predicate": "part_of",
+      "object": "database server",
+      "confidence": 0.95
+    },
+    {
+      "subject": ...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "layout",
+      "predicate": "instance_of",
+      "object": "post",
+      "confidence": 0.95
+    },
+    {
+      "subject": "title",
+      "predicate": "instance_of",
+      "object": "post",
+      "confidence": 0.95
+    },
+    {
+      "subject": "date",
+ ...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "layout",
+      "predicate": "instance_of",
+      "object": "post",
+      "confidence": 0.95
+    },
+    {
+      "subject": "title",
+      "predicate": "works_at",
+      "object": "post",
+      "confidence": 0.98
+    },
+    {
+      "subject": "description...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "Our adapted client",
+      "predicate": "handles",
+      "object": "most common method differences",
+      "confidence": 0.95
+    },
+    {
+      "subject": "If you encounter unsupported features",
+      "predicate": "add",
+      "object": "similar wrapp...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "Customizable Workflows",
+      "predicate": "tailor",
+      "object": "annotation tools",
+      "confidence": 0.95
+    },
+    {
+      "subject": "annotation tools",
+      "predicate": "works_at",
+      "object": "specific project needs",
+      "confiden...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "RLHF-Lab",
+      "predicate": "instance_of",
+      "object": "company",
+      "confidence": 0.95
+    },
+    {
+      "subject": "Innovative RLHF integration",
+      "predicate": "subclass_of",
+      "object": "Strengths",
+      "confidence": 0.9
+    },
+ ...
+INFO:ingestion.extract_relations:Extracted 1067 relationships from 423 chunks
+INFO:db.ingest_data:Extracted 173 entities and 1067 relationships
+INFO:ingestion.embeddings:Generating embeddings for 423 text chunks
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.30it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.30it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.83it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.83it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.82it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.82it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.93it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.93it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.82it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.82it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.75it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.75it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.80it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.80it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.89it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.89it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.81it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.81it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.79it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.79it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.72it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.72it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.60it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.60it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.62it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.62it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 10.42it/s]
+INFO:ingestion.embeddings:Generated embeddings for 423 chunks
+ERROR:db.ingest_data:Error in embedding generation: 'Entity' object has no attribute 'get'
+ERROR:chromadb.telemetry.product.posthog:Failed to send telemetry event CollectionAddEvent: capture() takes 1 positional argument but 3 were given
+INFO:db.helix_interface:Stored 423 chunks in ChromaDB
+INFO:db.helix_interface:Successfully prepared 423 chunks for storage
+ERROR:db.ingest_data:Error storing data in database: 'Entity' object has no attribute 'get'
+INFO:db.ingest_data:Ingestion completed. Stats: {'chunks': 0, 'entities': 0, 'relationships': 0, 'edges': 0}
+INFO:api.main:Ingestion completed: Successfully ingested 0 chunks, 0 entities, 0 relationships
+INFO:     127.0.0.1:63520 - "POST /ingest HTTP/1.1" 200 OK
+INFO:api.main:Processing query: What is MCP?
+INFO:rag.retrieve:Performing enhanced hybrid retrieval for query: What is MCP?
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 60.88it/s]
+ERROR:chromadb.telemetry.product.posthog:Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+WARNING:rag.retrieve:BM25 search not available
+INFO:rag.cross_encoder_rerank:Cross-encoder re-ranking 20 candidates
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.06it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.06it/s]
+INFO:rag.cross_encoder_rerank:Cross-encoder re-ranking completed, top score: 3.8886
+INFO:rag.retrieve:Enhanced retrieval completed: 5 final results
+INFO:rag.generate_answer:Generated answer in 14.97s using granite4:micro-h
+INFO:api.main:Query processed successfully in 14.97s
+INFO:     127.0.0.1:51152 - "POST /query HTTP/1.1" 200 OK
