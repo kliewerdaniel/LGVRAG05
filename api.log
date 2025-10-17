@@ -1,0 +1,711 @@
+INFO:     Will watch for changes in these directories: ['/Users/danielkliewer/helix04']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [20046] using WatchFiles
+/Users/danielkliewer/helix04/.venv/lib/python3.13/site-packages/transformers/utils/generic.py:441: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+INFO:ingestion.embeddings:Loading embedding model: sentence-transformers/all-MiniLM-L6-v2
+INFO:sentence_transformers.SentenceTransformer:Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+/Users/danielkliewer/helix04/.venv/lib/python3.13/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/Users/danielkliewer/helix04/.venv/lib/python3.13/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/Users/danielkliewer/helix04/.venv/lib/python3.13/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+INFO:ingestion.embeddings:Model loaded successfully. Embedding dimension: 384
+ERROR:chromadb.telemetry.product.posthog:Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+ERROR:chromadb.telemetry.product.posthog:Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+ERROR:chromadb.telemetry.product.posthog:Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+INFO:db.helix_interface:ChromaDB initialized at: ./data/chromadb
+ERROR:chromadb.telemetry.product.posthog:Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+ERROR:chromadb.telemetry.product.posthog:Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+ERROR:chromadb.telemetry.product.posthog:Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+INFO:db.helix_interface:ChromaDB initialized at: ./data/chromadb
+INFO:ingestion.embeddings:Loading embedding model: sentence-transformers/all-MiniLM-L6-v2
+INFO:sentence_transformers.SentenceTransformer:Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+/Users/danielkliewer/helix04/.venv/lib/python3.13/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+INFO:ingestion.embeddings:Model loaded successfully. Embedding dimension: 384
+WARNING:rag.retrieve:No chunks available for BM25 initialization
+INFO:sentence_transformers.cross_encoder.CrossEncoder:Use pytorch device: mps
+INFO:rag.cross_encoder_rerank:Loaded cross-encoder model: cross-encoder/ms-marco-MiniLM-L-6-v2
+INFO:rag.generate_answer:Ollama validation deferred to generation time
+INFO:     Started server process [20049]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:63513 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63518 - "GET /api/health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:63518 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63518 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:api.main:Ingesting directory: documents
+INFO:db.ingest_data:Starting ingestion from directory: documents
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2024-12-05-personagen.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2024-12-05-personagen.md: 4 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2024-11-27-swarm-autogen.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2024-11-27-swarm-autogen.md: 3 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2024-12-30-cultural-fingerprints.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2024-12-30-cultural-fingerprints.md: 6 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2024-12-02-persona-chat.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2024-12-02-persona-chat.md: 2 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2025-07-06-demystifying-large-language-models.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2025-07-06-demystifying-large-language-models.md: 2 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2025-07-06-beyond-prompts.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2025-07-06-beyond-prompts.md: 1 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2024-11-27-enhanced-persona-generator.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2024-11-27-enhanced-persona-generator.md: 5 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2025-03-21-browser-use-ollama-mcp.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2025-03-21-browser-use-ollama-mcp.md: 8 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2024-12-10-rl.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2024-12-10-rl.md: 3 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2025-03-09-mastra-ollama-nextjs.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2025-03-09-mastra-ollama-nextjs.md: 4 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2024-10-04-detailed-description-of-insight-journal.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2024-10-04-detailed-description-of-insight-journal.md: 24 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2025-03-03-text-adventure.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2025-03-03-text-adventure.md: 1 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2025-02-25-building-an-ai-powered-filename-generator-chrome-extension.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2025-02-25-building-an-ai-powered-filename-generator-chrome-extension.md: 1 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2024-11-22-planning.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2024-11-22-planning.md: 5 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2024-11-27-reddit-blog-generator.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2024-11-27-reddit-blog-generator.md: 6 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2024-12-09-pydantic-rag.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2024-12-09-pydantic-rag.md: 2 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2024-11-04-deep-fake.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2024-11-04-deep-fake.md: 11 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2024-12-19-homeless-guide-austin.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2024-12-19-homeless-guide-austin.md: 3 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2025-03-28-ollama-chunking.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2025-03-28-ollama-chunking.md: 3 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2024-10-30-creating-ai-agents.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2024-10-30-creating-ai-agents.md: 1 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2025-03-09-custom-agent.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2025-03-09-custom-agent.md: 3 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2024-10-24-ghost-writer.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2024-10-24-ghost-writer.md: 2 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2025-03-12-mcp-openai-agents-sdk-ollama.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2025-03-12-mcp-openai-agents-sdk-ollama.md: 1 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2024-10-18-building-a-full-stack-application-with-django-and-react.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2024-10-18-building-a-full-stack-application-with-django-and-react.md: 4 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2025-03-11-integrating-rust-burn-framework-for-ai.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2025-03-11-integrating-rust-burn-framework-for-ai.md: 2 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2025-03-09-nextjs-firebase.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2025-03-09-nextjs-firebase.md: 3 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2025-10-16.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2025-10-16.md: 5 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2025-03-09-nextjs-ollama-custom-agent-framework.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2025-03-09-nextjs-ollama-custom-agent-framework.md: 5 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2024-10-09-how-to-build-a-persona-based-blog-post-generator-with-large-language-models.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2024-10-09-how-to-build-a-persona-based-blog-post-generator-with-large-language-models.md: 6 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2024-11-28-basic-autogen.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2024-11-28-basic-autogen.md: 2 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2024-11-29-tech-company-orchestrator.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2024-11-29-tech-company-orchestrator.md: 1 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2024-12-19-langchain-ollama.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2024-12-19-langchain-ollama.md: 11 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2025-04-06-judgmental-art-cat.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2025-04-06-judgmental-art-cat.md: 1 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2025-02-05-loco-local-localllama.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2025-02-05-loco-local-localllama.md: 1 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2025-02-23-privacy-policy.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2025-02-23-privacy-policy.md: 1 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2024-12-01-basic-rag.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2024-12-01-basic-rag.md: 2 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2025-03-25-large-scale-agent-architecture.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2025-03-25-large-scale-agent-architecture.md: 84 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2024-12-19-continue.dev-ollama.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2024-12-19-continue.dev-ollama.md: 2 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2024-11-27-instagram-feed-summarizer.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2024-11-27-instagram-feed-summarizer.md: 4 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2025-03-11-integrating-the-openai-agents-sdk-with-rusts-burn-framework.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2025-03-11-integrating-the-openai-agents-sdk-with-rusts-burn-framework.md: 1 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2025-01-23-building-a-multimodal-story-generation-system.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2025-01-23-building-a-multimodal-story-generation-system.md: 1 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2024-11-27-data-annotation-guide.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2024-11-27-data-annotation-guide.md: 3 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2024-11-22-rlhf-lab.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2024-11-22-rlhf-lab.md: 9 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2024-12-14-learning-from-the-past.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2024-12-14-learning-from-the-past.md: 2 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2025-02-14-reddiss.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2025-02-14-reddiss.md: 3 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2025-03-30-building-a-personalized-ai-learning-system-with-local-llm.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2025-03-30-building-a-personalized-ai-learning-system-with-local-llm.md: 7 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2025-03-29-markdown-teaching-assistant.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2025-03-29-markdown-teaching-assistant.md: 15 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2025-03-30-learning-platform.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2025-03-30-learning-platform.md: 7 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2025-02-03-scrape-reddit-analysis-blog.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2025-02-03-scrape-reddit-analysis-blog.md: 3 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2025-07-08-ai-ssr-guide.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2025-07-08-ai-ssr-guide.md: 5 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2025-01-16-solo-business-ventures.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2025-01-16-solo-business-ventures.md: 1 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2025-03-24-model-context-protocol.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2025-03-24-model-context-protocol.md: 9 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2024-10-22-integrating-django-react-ollama-with-xai-api.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2024-10-22-integrating-django-react-ollama-with-xai-api.md: 2 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2025-04-07-echoshelf.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2025-04-07-echoshelf.md: 3 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2025-03-09-reason-ai.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2025-03-09-reason-ai.md: 5 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2024-10-12-django-react.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2024-10-12-django-react.md: 2 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2025-03-13-simulacra.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2025-03-13-simulacra.md: 4 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2025-01-22-image-to-book.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2025-01-22-image-to-book.md: 2 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2025-02-05-open-deep-research.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2025-02-05-open-deep-research.md: 1 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2025-03-22-local-llm-document-pipeline-blueprint.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2025-03-22-local-llm-document-pipeline-blueprint.md: 9 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2024-12-11-next-gen-personagen.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2024-12-11-next-gen-personagen.md: 10 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2025-03-12-integrating-openai-agents-sdk-ollama.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2025-03-12-integrating-openai-agents-sdk-ollama.md: 62 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2024-11-27-ai-agent-based-cross-platform-content-generator-and-distributor.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2024-11-27-ai-agent-based-cross-platform-content-generator-and-distributor.md: 2 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2025-03-28-scalable-ai-backends.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2025-03-28-scalable-ai-backends.md: 6 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2025-03-12-openai-agents-sdk-ollama-integration.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2025-03-12-openai-agents-sdk-ollama-integration.md: 5 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2025-03-12-mcp-openai-responses-api-agents-sdk-ollama.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2025-03-12-mcp-openai-responses-api-agents-sdk-ollama.md: 2 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2024-11-28-basic-swarm-chatbot.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2024-11-28-basic-swarm-chatbot.md: 2 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2024-11-23-rlhf-lab-business-plan.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2024-11-23-rlhf-lab-business-plan.md: 3 chunks
+INFO:ingestion.parse_docs:Parsing document: documents/blog/2025-02-05-ollama-smolagents-open-deep-research.md
+INFO:ingestion.parse_docs:Parsed documents/blog/2025-02-05-ollama-smolagents-open-deep-research.md: 2 chunks
+INFO:ingestion.parse_docs:Total chunks parsed: 423
+INFO:db.ingest_data:Parsed 423 chunks from documents
+INFO:db.ingest_data:Starting entity and relationship extraction...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "entities": [
+    {
+      "name": "Cultural Fingerprints",
+      "type": "CONCEPT",
+      "confidence": 0.95
+    },
+    {
+      "name": "AI: Comparative Analysis of Ethical Guardrails",
+      "type": "CONCEPT",
+      "confidence": 0.9
+    },
+    {
+      "name": "LLMs (US, Chinese, French Models)...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "entities": [
+    {
+      "name": "Guardrail Detection Methods",
+      "type": "TECHNOLOGY",
+      "confidence": 0.9
+    },
+    {
+      "name": "Primary Detection Methods",
+      "type": "CONCEPT",
+      "confidence": 0.85
+    },
+    {
+      "name": "Trigger Word Analysis",
+      "type": "TECHNO...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "entities": [
+    {
+      "name": "International Cooperation",
+      "type": "CONCEPT",
+      "confidence": 0.95
+    },
+    {
+      "name": "Cross-border collaboration",
+      "type": "CONCEPT",
+      "confidence": 0.92
+    },
+    {
+      "name": "Cultural exchange programs",
+      "type": "PROD...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "entities": [
+    {
+      "name": "Colonialism and Mercantilism",
+      "type": "CONCEPT",
+      "confidence": 0.95
+    },
+    {
+      "name": "Resource Extraction",
+      "type": "PRODUCT",
+      "confidence": 0.9
+    },
+    {
+      "name": "10000000000000",
+      "type": "MONEY",
+      "confid...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "entities": [
+    {
+      "name": "AI Text Adventure Generator Web Application",
+      "type": "PRODUCT",
+      "confidence": 0.95
+    },
+    {
+      "name": "Next.js",
+      "type": "TECHNOLOGY",
+      "confidence": 0.98
+    },
+    {
+      "name": "Python",
+      "type": "TECHNOLOGY",
+      "co...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "entities": [
+    {
+      "name": "DataAnnotate Inc.",
+      "type": "ORGANIZATION",
+      "confidence": 0.98
+    },
+    {
+      "name": "$500,000",
+      "type": "MONEY",
+      "confidence": 0.95
+    },
+    {
+      "name": "$1.5 million",
+      "type": "MONEY",
+      "confidence": 0.94
+    },
+ ...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "entities": [
+    {
+      "name": "DataAnnotate Inc.",
+      "type": "ORGANIZATION",
+      "confidence": 0.99
+    },
+    {
+      "name": "Efficient",
+      "type": "PRODUCT",
+      "confidence": 0.85
+    },
+    {
+      "name": "User-Friendly",
+      "type": "PRODUCT",
+      "confidence": 0.85
+  ...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "entities": [
+    {
+      "name": "CommUnityCare Health Centers",
+      "type": "ORGANIZATION",
+      "confidence": 0.95
+    },
+    {
+      "name": "Healthcare for the Homeless",
+      "type": "ORGANIZATION",
+      "confidence": 0.94
+    },
+    {
+      "name": "Integral Care",
+      "type": "ORG...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "entities": [
+    {
+      "name": "Austin",
+      "type": "LOCATION",
+      "confidence": 0.98
+    },
+    {
+      "name": "2024-12-19",
+      "type": "DATE",
+      "confidence": 0.95
+    },
+    {
+      "name": "07:42:44 -0500",
+      "type": "TIME",
+      "confidence": 0.95
+    },
+    {
+      "n...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "entities": [
+    {
+      "name": "Windows",
+      "type": "OPERATING_SYSTEM",
+      "confidence": 0.95
+    },
+    {
+      "name": "macOS",
+      "type": "OPERATING_SYSTEM",
+      "confidence": 0.95
+    },
+    {
+      "name": "Linux",
+      "type": "OPERATING_SYSTEM",
+      "confidence": 0.95
+  ...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "entities": [
+    {
+      "name": "EchoShelf",
+      "type": "PRODUCT",
+      "confidence": 0.98
+    },
+    {
+      "name": "ERP",
+      "type": "CONCEPT",
+      "confidence": 0.95
+    },
+    {
+      "name": "inventory management platforms",
+      "type": "CONCEPT",
+      "confidence": 0.94
+    ...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "entities": [
+    {
+      "name": "grafana-secrets",
+      "type": "PRODUCT",
+      "confidence": 0.95
+    },
+    {
+      "name": "admin_password",
+      "type": "CONCEPT",
+      "confidence": 0.9
+    },
+    {
+      "name": "grafana-data",
+      "type": "PRODUCT",
+      "confidence": 0.95
+    },...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "entities": [
+    {
+      "name": "healthcare",
+      "type": "CONCEPT",
+      "confidence": 0.95
+    },
+    {
+      "name": "autonomous driving",
+      "type": "CONCEPT",
+      "confidence": 0.94
+    },
+    {
+      "name": "TensorFlow",
+      "type": "TECHNOLOGY",
+      "confidence": 0.96
+    }...
+INFO:ingestion.extract_relations:Extracted 173 entities from 423 chunks
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "research programs",
+      "predicate": "instance_of",
+      "object": "Critical Success Factors",
+      "confidence": 0.95
+    },
+    {
+      "subject": "International Cooperation",
+      "predicate": "part_of",
+      "object": "Critical Success Factors...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "e-books",
+      "predicate": "created_by",
+      "object": "Writing Style Personas for LLMs",
+      "confidence": 0.98
+    },
+    {
+      "subject": "e-books",
+      "predicate": "created_by",
+      "object": "Building Agentic Knowledge Graphs with Loca...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "AI Knowledge Companion",
+      "predicate": "created_by",
+      "object": "layout",
+      "confidence": 0.9
+    },
+    {
+      "subject": "AI Knowledge Companion",
+      "predicate": "instance_of",
+      "object": "system",
+      "confidence": 0.95
+    ...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "unit tests",
+      "predicate": "part_of",
+      "object": "testing process",
+      "confidence": 0.95
+    },
+    {
+      "subject": "integration tests",
+      "predicate": "part_of",
+      "object": "testing process",
+      "confidence": 0.95
+    },
+  ...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "Reinforcement learning",
+      "predicate": "evolved_from",
+      "object": "simple tabular Q-learning",
+      "confidence": 0.9
+    },
+    {
+      "subject": "Reinforcement learning",
+      "predicate": "bridging",
+      "object": "statistics, control ...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "Operating System",
+      "predicate": "part_of",
+      "object": "Unix-like operating system",
+      "confidence": 0.95
+    },
+    {
+      "subject": "Homebrew",
+      "predicate": "instance_of",
+      "object": "Package Manager",
+      "confidence": 0....
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "static sites",
+      "predicate": "instance_of",
+      "object": "web pages",
+      "confidence": 0.95
+    },
+    {
+      "subject": "SSGs",
+      "predicate": "part_of",
+      "object": "web development practices",
+      "confidence": 0.9
+    },
+    {
+...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "Insight Journal platform",
+      "predicate": "hosted_on",
+      "object": "Netlify",
+      "confidence": 0.95
+    },
+    {
+      "subject": "AI analysis generation time",
+      "predicate": "measured_at",
+      "object": "200 milliseconds",
+      "conf...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "social_class_disparity",
+      "predicate": "instance_of",
+      "object": "scale",
+      "confidence": 0.95
+    },
+    {
+      "subject": "Industrial Revolution",
+      "predicate": "wealth_transfer_type",
+      "object": "Technological Advancement",
+ ...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "RedditBlogGenerator",
+      "predicate": "created_by",
+      "object": "author",
+      "confidence": 0.9
+    },
+    {
+      "subject": "Project Overview",
+      "predicate": "instance_of",
+      "object": "section",
+      "confidence": 0.95
+    },
+    {...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "DataAnnotate Inc.",
+      "predicate": "instance_of",
+      "object": "company",
+      "confidence": 0.98
+    },
+    {
+      "subject": "Year 1",
+      "predicate": "works_at",
+      "object": "DataAnnotate Inc.",
+      "confidence": 0.95
+    },
+    {
+ ...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "layout",
+      "predicate": "instance_of",
+      "object": "Web Application",
+      "confidence": 0.95
+    },
+    {
+      "subject": "title",
+      "predicate": "works_at",
+      "object": "layout",
+      "confidence": 0.9
+    },
+    {
+      "subject": ...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "global data annotation tools market",
+      "predicate": "valued_at",
+      "object": "$1.5 billion",
+      "confidence": 0.95
+    },
+    {
+      "subject": "global data annotation tools market",
+      "predicate": "projected_to_reach",
+      "object": ...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "Manager",
+      "predicate": "works_at",
+      "object": "recruitment and employee management system",
+      "confidence": 0.95
+    },
+    {
+      "subject": "recruitment and employee management system",
+      "predicate": "instance_of",
+      "object":...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "logging",
+      "predicate": "instance_of",
+      "object": "module",
+      "confidence": 0.95
+    },
+    {
+      "subject": "load_dotenv",
+      "predicate": "instance_of",
+      "object": "function",
+      "confidence": 0.9
+    },
+    {
+      "subject...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "deepfakes",
+      "predicate": "related_to",
+      "object": "ethical use of generated media",
+      "confidence": 0.95
+    },
+    {
+      "subject": "intellectual property rights",
+      "predicate": "related_to",
+      "object": "concerns about deepfa...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "efficiency",
+      "predicate": "related_to",
+      "object": "meticulous attention",
+      "confidence": 0.9
+    },
+    {
+      "subject": "convolutional neural networks (CNNs)",
+      "predicate": "instance_of",
+      "object": "deep learning models",...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "participants",
+      "predicate": "conducted_with",
+      "object": "ethical standards",
+      "confidence": 0.9
+    },
+    {
+      "subject": "videos",
+      "predicate": "recorded_from",
+      "object": "wearer's perspective",
+      "confidence": 0.95...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "Austin",
+      "predicate": "has_population_of_homeless_people",
+      "object": "homeless population",
+      "confidence": 0.9
+    },
+    {
+      "subject": "Homelessness in Austin",
+      "predicate": "is_a",
+      "object": "Homelessness",
+      "con...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "AI Agent",
+      "predicate": "is_a",
+      "object": "rope",
+      "confidence": 0.85
+    },
+    {
+      "subject": "AI Agent",
+      "predicate": "is_a",
+      "object": "camel",
+      "confidence": 0.9
+    },
+    {
+      "subject": "AI Agent",
+      ...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "High-level goal",
+      "predicate": "instance_of",
+      "object": "project",
+      "confidence": 0.95
+    },
+    {
+      "subject": "A local Graph + Vector Retrieval-Augmented Generation (RAG) system",
+      "predicate": "instance_of",
+      "object":...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "layout",
+      "predicate": "instance_of",
+      "object": "post",
+      "confidence": 0.98
+    },
+    {
+      "subject": "title",
+      "predicate": "works_at",
+      "object": "post",
+      "confidence": 1.0
+    },
+    {
+      "subject": "date",
+     ...
+ERROR:ingestion.extract_relations:LLM returned sensor data instead of JSON. Response: {
+  "relationships": [
+    {
+      "subject": "Tech Company Orchestrator",
+      "predicate": "instance_of",
+      "object": "project",
+      "confidence": 0.95
+    },
+    {
+      "subject": "Tech Company Orchestrator",
+      "predicate": "created_by",
+      "object": "kliewerdaniel",
+      "confide...

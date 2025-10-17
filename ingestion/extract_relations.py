@@ -245,7 +245,12 @@ Return ONLY a JSON object with this exact format:
 
 Text: {text}
 
-IMPORTANT: Return only the JSON object, no other text or explanation."""
+CRITICAL INSTRUCTIONS:
+- Return ONLY the JSON object, no other text, explanations, or sensor data
+- Do not return sensor readings, coordinates, or numerical data
+- Only extract actual named entities from the text
+- If no entities are found, return an empty array: {{"entities": []}}
+- Do not make up entities that are not in the text"""
 
     def _create_relationship_prompt(self, text: str) -> str:
         """Create prompt for relationship extraction."""
@@ -269,7 +274,12 @@ Return ONLY a JSON object with this exact format:
 
 Text: {text}
 
-IMPORTANT: Return only the JSON object, no other text or explanation."""
+CRITICAL INSTRUCTIONS:
+- Return ONLY the JSON object, no other text, explanations, or sensor data
+- Do not return sensor readings, coordinates, or numerical data
+- Only extract actual relationships between entities mentioned in the text
+- If no relationships are found, return an empty array: {{"relationships": []}}
+- Do not make up relationships that are not explicitly stated in the text"""
 
     def _clean_json_response(self, response_text: str) -> str:
         """Clean and prepare JSON response text for parsing."""
@@ -278,6 +288,9 @@ IMPORTANT: Return only the JSON object, no other text or explanation."""
 
         # Strip whitespace
         cleaned = response_text.strip()
+
+        # Log the raw response for debugging
+        logger.debug(f"Raw LLM response: {cleaned[:500]}...")
 
         # Remove any markdown code block markers
         cleaned = re.sub(r'^```json\s*', '', cleaned)
@@ -290,9 +303,45 @@ IMPORTANT: Return only the JSON object, no other text or explanation."""
         end_idx = cleaned.rfind('}')
 
         if start_idx == -1 or end_idx == -1 or start_idx >= end_idx:
+            logger.warning(f"No valid JSON structure found in response. Start: {start_idx}, End: {end_idx}")
+            logger.warning(f"Cleaned response: {cleaned[:300]}...")
             return cleaned
 
-        return cleaned[start_idx:end_idx + 1]
+        cleaned_json = cleaned[start_idx:end_idx + 1]
+        logger.debug(f"Extracted JSON: {cleaned_json[:300]}...")
+
+        return cleaned_json
+
+    def _is_likely_sensor_data(self, text: str) -> bool:
+        """Check if the response looks like sensor data rather than entity/relationship JSON."""
+        if not text:
+            return False
+
+        # Check for patterns that suggest sensor data
+        sensor_patterns = [
+            r'latitude.*longitude',  # GPS coordinates
+            r'acceleration[XYZ].*-\d+\.\d+',  # Acceleration values
+            r'temperature.*-\d+\.\d+',  # Temperature readings
+            r'pressure.*-\d+\.\d+',  # Pressure readings
+            r'humidity.*-\d+\.\d+',  # Humidity readings
+            r'altitude.*-\d+\.\d+',  # Altitude readings
+            r'vibration[XYZ].*-\d+\.\d+',  # Vibration data
+            r'magneticFieldStrength.*-\d+\.\d+',  # Magnetic field data
+            r'electricFieldStrength.*-\d+\.\d+',  # Electric field data
+        ]
+
+        # Check if text contains multiple key-value pairs with numeric values
+        # This is a common pattern in sensor data
+        key_value_pairs = re.findall(r'"([^"]+)"\s*:\s*(-?\d+\.\d+)', text)
+        if len(key_value_pairs) > 10:  # Many numeric values suggest sensor data
+            return True
+
+        # Check for specific sensor data patterns
+        for pattern in sensor_patterns:
+            if re.search(pattern, text, re.IGNORECASE):
+                return True
+
+        return False
 
     async def _call_ollama(self, prompt: str, model: str) -> Optional[Dict[str, Any]]:
         """Call Ollama API for text generation."""
@@ -323,6 +372,12 @@ IMPORTANT: Return only the JSON object, no other text or explanation."""
                             # Clean the response text first
                             cleaned_response = self._clean_json_response(response_text)
                             logger.debug(f"Cleaned response: {cleaned_response[:200]}...")
+
+                            # Check if the response looks like sensor data or other non-JSON content
+                            if self._is_likely_sensor_data(cleaned_response):
+                                logger.error(f"LLM returned sensor data instead of JSON. Response: {cleaned_response[:300]}...")
+                                return None
+
                             return json.loads(cleaned_response)
                         except json.JSONDecodeError as e:
                             logger.warning(f"Failed to parse JSON response: {response_text}")

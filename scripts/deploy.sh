@@ -222,6 +222,19 @@ start_services() {
         fi
     fi
 
+    # Start the API server
+    log_info "Starting FastAPI server..."
+    nohup python3 -c "
+import uvicorn
+import sys
+sys.path.append('.')
+from config import get_config
+config = get_config()
+uvicorn.run('api.main:app', host=config.api.host, port=config.api.port, reload=config.api.reload)
+" > api.log 2>&1 &
+    API_PID=$!
+    sleep 3
+
     log_success "Services started"
 }
 
@@ -233,7 +246,7 @@ health_check() {
 
     # Check API health
     log_info "Checking API health..."
-    HEALTH_CHECK_URL="http://localhost:8000/api/health"
+    HEALTH_CHECK_URL="http://localhost:8000/health"
 
     for i in $(seq 1 $HEALTH_CHECK_TIMEOUT); do
         if curl -s -f $HEALTH_CHECK_URL > /dev/null 2>&1; then
@@ -291,6 +304,7 @@ main() {
     echo "4. Monitor system health at http://localhost:8000/api/health"
     echo ""
     log_info "To stop the system, run: pkill -f 'python.*api'"
+    log_info "Monitor system health at http://localhost:8000/health"
 }
 
 # Handle script arguments
